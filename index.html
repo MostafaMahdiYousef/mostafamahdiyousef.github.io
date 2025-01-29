@@ -71,7 +71,25 @@
         .sidebar p {
             font-size: 0.9rem;
             color: #666;
-            margin-bottom: 1.5rem;
+            margin-bottom: 1rem;
+        }
+        .icon-links {
+            display: flex;
+            justify-content: center;
+            gap: 0.5rem;
+            margin-top: 1rem;
+        }
+        .icon-links a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 36px;
+            height: 36px;
+            background-color: #007acc;
+            color: white;
+            border-radius: 50%;
+            text-decoration: none;
+            font-size: 1.2rem;
         }
         .main-content {
             flex: 1;
@@ -95,6 +113,7 @@
             margin-top: auto;
         }
     </style>
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <header>
@@ -102,21 +121,29 @@
         <nav>
             <a href="#about">About me</a>
            <!-- <a href="#education">Education</a>
-            <a href="#projects">Projects</a>-->
-            <a href="#contact">Contact</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a> -->
             <a href="#cv">CV</a>
         </nav>
     </header>
 
     <div class="content">
         <aside class="sidebar">
-            <img src="mostafa.jpeg" alt="Profile Picture">
+            <img src="profile-placeholder.jpg" alt="Profile Picture">
             <h2>Mostafa Mahdi Yousef</h2>
             <p>Ph.D. Student in Electrical Engineering at York University</p>
             <p><strong>Location:</strong> Toronto, ON</p>
-            <p>
-                <a href="https://www.linkedin.com/in/mostafa-mahdi-yousef/" target="_blank">LinkedIn</a>
-            </p>
+            <div class="icon-links">
+                <a href="https://www.linkedin.com/in/mostafa-mahdi-yousef/" target="_blank" title="LinkedIn">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+                <a href="#" target="_blank" title="Twitter">
+                    <i class="fab fa-twitter"></i>
+                </a>
+                <a href="#" title="Location">
+                    <i class="fas fa-map-marker-alt"></i>
+                </a>
+            </div>
         </aside>
 
         <div class="main-content">
