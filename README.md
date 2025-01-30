@@ -135,13 +135,3 @@ This project is open-source. Feel free to fork, modify, and use it for personal 
 
 - **Mostafa Mahdi Yousef** – Electrical Engineer and Ph.D. researcher at York University.
 ```
-
----
-
-### **Markdown Features Used**
-- **Headings** (`#`, `##`, etc.) to structure the document.
-- **Code blocks** (triple backticks) for HTML, CSS, and shell commands.
-- **Lists** to organize customization instructions.
-- **Icons/emojis** for a visually appealing style.
-
-This **README.md** is user-friendly and provides all essential information to help others customize and use the website template.
