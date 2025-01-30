@@ -3,18 +3,18 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Your Name - CV</title>
+  <title>Mostafa Mahdi Yousef - CV</title>
   <style>
     body {
       margin: 0;
-      font-family: Arial, sans-serif;
+      font-family: "Segoe UI", Arial, sans-serif;
       background-color: #f2f2f2;
       color: #333;
       line-height: 1.6;
     }
     nav {
       background-color: #333;
-      padding: 1em;
+      padding: 1em 2em;
       text-align: right;
     }
     nav a {
@@ -28,14 +28,28 @@
     }
     .container {
       max-width: 900px;
-      margin: 2em auto;
+      margin: 3em auto;
       background-color: #fff;
-      padding: 2em;
-      border-radius: 8px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      padding: 2.5em;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     }
-    h1, h2, h3 {
-      margin-top: 0;
+    h1 {
+      text-align: center;
+      font-size: 2em;
+      margin-bottom: 0.5em;
+    }
+    h2 {
+      text-align: center;
+      font-size: 1.5em;
+      color: #555;
+      margin-bottom: 1.5em;
+    }
+    h3 {
+      border-left: 4px solid #007acc;
+      padding-left: 10px;
+      margin-bottom: 1em;
+      color: #007acc;
     }
     .cv-section {
       margin-bottom: 2.5em;
@@ -46,29 +60,40 @@
     }
     li {
       margin-bottom: 1.5em;
+      line-height: 1.6;
     }
-    strong {
-      color: #007acc;
+    .degree-title {
+      font-weight: bold;
+      font-size: 1.1em;
+      color: #333;
     }
-    footer {
-      text-align: center;
-      margin-top: 3em;
-      font-size: 0.9em;
+    .details {
       color: #666;
+    }
+    .highlight {
+      font-weight: bold;
+      color: #007acc;
     }
     a.download-cv {
       display: inline-block;
-      margin-top: 1em;
-      padding: 0.5em 1em;
+      margin: 1.5em 0 0;
+      padding: 0.8em 1.5em;
       color: #fff;
       background-color: #007acc;
       text-decoration: none;
       border-radius: 5px;
       font-weight: bold;
       text-align: center;
+      font-size: 1em;
     }
     a.download-cv:hover {
       background-color: #005f99;
+    }
+    footer {
+      text-align: center;
+      margin-top: 3em;
+      font-size: 0.9em;
+      color: #666;
     }
   </style>
 </head>
@@ -80,8 +105,9 @@
     <a href="cv.html">CV</a>
   </nav>
 
+  <!-- Container for CV content -->
   <div class="container">
-    <h1>Your Name</h1>
+    <h1>Mostafa Mahdi Yousef</h1>
     <h2>Curriculum Vitae</h2>
 
     <!-- Education Section -->
@@ -89,25 +115,28 @@
       <h3>Education</h3>
       <ul>
         <li>
-          <strong>Doctor of Philosophy (Ph.D.) in Electrical Engineering and Computer Science</strong>, York University, Toronto, Canada (2023 - Present)
+          <span class="degree-title">Doctor of Philosophy (Ph.D.) in Electrical Engineering and Computer Science</span>, 
+          York University, Toronto, Canada <span class="details">(2023 - Present)</span>
           <br />
-          <em>Research Focus:</em> Development of advanced on-board EV chargers with V2X capability and reliable State of Charge (SoC) estimation methods for optimal vehicle-to-grid performance.
+          <span class="highlight">Research Focus:</span> Development of advanced on-board EV chargers with V2X capability and reliable State of Charge (SoC) estimation methods for optimal vehicle-to-grid performance.
           <br />
-          <em>Supervisor:</em> Prof. Houshang Karimi
+          <span class="highlight">Supervisor:</span> Prof. Houshang Karimi
         </li>
         <li>
-          <strong>Master of Science (M.Sc.) in Electrical Engineering</strong>, Sharif University of Technology, Tehran, Iran (2019 - 2022)
+          <span class="degree-title">Master of Science (M.Sc.) in Electrical Engineering</span>, 
+          Sharif University of Technology, Tehran, Iran <span class="details">(2019 - 2022)</span>
           <br />
-          <em>Thesis:</em> Dynamic State Estimation in Power Systems Using Wide Area Measurement System (WAMS) Data
+          <span class="highlight">Thesis:</span> Dynamic State Estimation in Power Systems Using Wide Area Measurement System (WAMS) Data
           <br />
           Developed a novel technique integrating the Robbins-Monro algorithm with Kalman filtering to enhance the speed and accuracy of state and parameter estimation under dynamic conditions.
           <br />
-          <em>Supervisor:</em> Prof. Mostafa Parniani
+          <span class="highlight">Supervisor:</span> Prof. Mostafa Parniani
         </li>
         <li>
-          <strong>Bachelor of Science (B.Sc.) in Electrical Engineering</strong>, University of Kashan, Iran (2014 - 2019)
+          <span class="degree-title">Bachelor of Science (B.Sc.) in Electrical Engineering</span>, 
+          University of Kashan, Iran <span class="details">(2014 - 2019)</span>
           <br />
-          <em>Thesis:</em> Optimization of Photovoltaic Energy Systems through Advanced MPPT Algorithms
+          <span class="highlight">Thesis:</span> Optimization of Photovoltaic Energy Systems through Advanced MPPT Algorithms
           <br />
           Designed and implemented cutting-edge Maximum Power Point Tracking algorithms to maximize solar energy extraction.
         </li>
@@ -119,7 +148,7 @@
 
   <!-- Footer -->
   <footer>
-    &copy; 2025 Your Name. All rights reserved.
+    &copy; 2025 Mostafa Mahdi Yousef. All rights reserved.
   </footer>
 
 </body>
