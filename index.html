@@ -2,17 +2,20 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
+  <!-- Ensures the page is scaled correctly on mobile devices -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Mostafa Mahdi Yousef - Main</title>
   <style>
     body {
       margin: 0;
-      font-family: Arial, sans-serif;
+      font-family: "Segoe UI", Arial, sans-serif;
+      line-height: 1.6;
       background-color: #f2f2f2;
       color: #333;
     }
     nav {
       background-color: #333;
-      padding: 1em;
+      padding: 1em 2em;
       text-align: right;
     }
     nav a {
@@ -25,14 +28,16 @@
       text-decoration: underline;
     }
     .container {
-      max-width: 800px;
-      margin: 2em auto;
+      max-width: 900px;
+      margin: 3em auto;
       background-color: #fff;
-      padding: 2em;
-      border-radius: 8px;
+      padding: 2.5em;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     }
     .profile-section {
       display: flex;
+      flex-wrap: wrap; /* Make it responsive for smaller screens */
       align-items: center;
       margin-bottom: 2em;
     }
@@ -42,21 +47,32 @@
       border-radius: 50%;
       background-color: #ccc;
       margin-right: 2em;
-      
-         background-image: url('mostafa.jpeg');
-         background-size: cover; 
-         background-position: center; 
-     
-
+      margin-bottom: 1em;
+      background-image: url('mostafa.jpeg');
+      background-size: cover;
+      background-position: center;
+    }
+    .profile-details {
+      flex: 1; /* So the text wraps nicely on smaller screens */
+      margin-bottom: 1em;
     }
     .profile-details h1 {
-      margin: 0 0 0.2em 0;
+      margin: 0 0 0.5em 0;
+      font-size: 1.8em;
+    }
+    .profile-details p {
+      margin-bottom: 1em;
     }
     .social-links img {
       width: 24px;
       height: 24px;
       margin-right: 0.5em;
       vertical-align: middle;
+    }
+    .social-links a {
+      display: inline-flex;
+      align-items: center;
+      margin-bottom: 0.5em;
     }
     .location {
       display: inline-flex;
@@ -68,9 +84,14 @@
       margin-right: 4px;
       vertical-align: middle;
     }
+    h2 {
+      margin-top: 0;
+      font-size: 1.6em;
+      color: #007acc;
+    }
     footer {
       text-align: center;
-      margin-top: 2em;
+      margin-top: 3em;
       font-size: 0.9em;
       color: #666;
     }
@@ -87,14 +108,18 @@
   <div class="container">
     <!-- Profile section -->
     <div class="profile-section">
-      <!-- Placeholder circle for profile photo -->
+      <!-- Profile photo -->
       <div class="profile-photo"></div>
       
       <div class="profile-details">
-        <h1>Your Name</h1>
-        <p>Short description about yourself, your field, or your interests.</p>
+        <h1>Mostafa Mahdi Yousef</h1>
+        <!-- Short description -->
+        <p>
+          Electrical Engineer and Ph.D. researcher at York University, specializing
+          in EV on-board chargers with V2X capability and advanced SoC estimation methods.
+        </p>
         
-        <!-- Social Links (Placeholder Icons) -->
+        <!-- Social Links -->
         <div class="social-links">
           <a href="https://x.com/MMahdiyousef" target="_blank">
             <img src="twitter.jpg" alt="Twitter icon" />
@@ -107,7 +132,7 @@
           </a>
         </div>
         
-        <!-- Location (Placeholder Icon) -->
+        <!-- Location -->
         <p class="location">
           <img src="location.png" alt="Location icon" />
           Toronto, Canada
@@ -118,24 +143,22 @@
     <!-- About section or introduction -->
     <h2>Hello / Bonjour / سلام!</h2>
     <p>
-Welcome to my personal website! I am Mostafa Mahdi Yousef, an Electrical Engineer and Ph.D.
+      Welcome to my personal website! I am Mostafa Mahdi Yousef, an Electrical Engineer and Ph.D.
       researcher at York University, specializing in the cutting-edge development of EV on-board
       chargers with V2X capability and advanced State of Charge (SoC) estimation techniques.
-      With a foundation of excellence from Sharif University of Technology, where I designed dynamic
-      state estimation methods for power systems, and a B.Sc. in optimizing solar energy through MPPT
+      With a foundation of excellence from Sharif University of Technology—where I designed dynamic
+      state estimation methods for power systems—and a B.Sc. in optimizing solar energy through MPPT
       algorithms, I blend innovation with technical expertise. My professional journey includes immersive
       industry experience at one of the largest power plants in the Middle East. From renewable energy systems
       to smart grids, I am passionate about driving sustainable advancements in power electronics and control systems.
-      Let's innovate the future of clean energy together!
+      Let’s innovate the future of clean energy together!
     </p>
 
-    <!-- Additional content could go here -->
-    
   </div>
 
   <!-- Footer -->
   <footer>
-    &copy; 2025 Your Name. All rights reserved.
+    &copy; 2025 Mostafa Mahdi Yousef. All rights reserved.
   </footer>
 </body>
 </html>
