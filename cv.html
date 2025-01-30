@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Your Name - CV</title>
   <style>
     body {
@@ -9,6 +10,7 @@
       font-family: Arial, sans-serif;
       background-color: #f2f2f2;
       color: #333;
+      line-height: 1.6;
     }
     nav {
       background-color: #333;
@@ -25,28 +27,53 @@
       text-decoration: underline;
     }
     .container {
-      max-width: 800px;
+      max-width: 900px;
       margin: 2em auto;
       background-color: #fff;
       padding: 2em;
       border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     }
     h1, h2, h3 {
       margin-top: 0;
     }
     .cv-section {
-      margin-bottom: 2em;
+      margin-bottom: 2.5em;
+    }
+    ul {
+      list-style-type: none;
+      padding: 0;
+    }
+    li {
+      margin-bottom: 1.5em;
+    }
+    strong {
+      color: #007acc;
     }
     footer {
       text-align: center;
-      margin-top: 2em;
+      margin-top: 3em;
       font-size: 0.9em;
       color: #666;
+    }
+    a.download-cv {
+      display: inline-block;
+      margin-top: 1em;
+      padding: 0.5em 1em;
+      color: #fff;
+      background-color: #007acc;
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: bold;
+      text-align: center;
+    }
+    a.download-cv:hover {
+      background-color: #005f99;
     }
   </style>
 </head>
 <body>
-  
+
   <!-- Navigation bar -->
   <nav>
     <a href="index.html">Main</a>
@@ -57,58 +84,35 @@
     <h1>Your Name</h1>
     <h2>Curriculum Vitae</h2>
 
+    <!-- Education Section -->
     <div class="cv-section">
       <h3>Education</h3>
       <ul>
         <li>
-          <strong>Master of Something</strong>, University Name, 20xx - 20xx
+          <strong>Doctor of Philosophy (Ph.D.) in Electrical Engineering and Computer Science</strong>, York University, Toronto, Canada (2023 - Present)
           <br />
-          Brief details about your thesis, supervisors, etc.
+          <em>Research Focus:</em> Development of advanced on-board EV chargers with V2X capability and reliable State of Charge (SoC) estimation methods for optimal vehicle-to-grid performance.
+          <br />
+          <em>Supervisor:</em> Prof. Houshang Karimi
         </li>
         <li>
-          <strong>Bachelor of Something</strong>, University Name, 20xx - 20xx
+          <strong>Master of Science (M.Sc.) in Electrical Engineering</strong>, Sharif University of Technology, Tehran, Iran (2019 - 2022)
           <br />
-          Brief details about your thesis or final project.
+          <em>Thesis:</em> Dynamic State Estimation in Power Systems Using Wide Area Measurement System (WAMS) Data
+          <br />
+          Developed a novel technique integrating the Robbins-Monro algorithm with Kalman filtering to enhance the speed and accuracy of state and parameter estimation under dynamic conditions.
+          <br />
+          <em>Supervisor:</em> Prof. Mostafa Parniani
+        </li>
+        <li>
+          <strong>Bachelor of Science (B.Sc.) in Electrical Engineering</strong>, University of Kashan, Iran (2014 - 2019)
+          <br />
+          <em>Thesis:</em> Optimization of Photovoltaic Energy Systems through Advanced MPPT Algorithms
+          <br />
+          Designed and implemented cutting-edge Maximum Power Point Tracking algorithms to maximize solar energy extraction.
         </li>
       </ul>
-    </div>
-
-    <div class="cv-section">
-      <h3>Experience</h3>
-      <ul>
-        <li>
-          <strong>Position Title</strong> at Company/Institution, 20xx - 20xx
-          <br />
-          Summarize your role, responsibilities, and achievements.
-        </li>
-        <li>
-          <strong>Another Role</strong> at Organization, 20xx - 20xx
-          <br />
-          Brief description of what you did.
-        </li>
-      </ul>
-    </div>
-
-    <div class="cv-section">
-      <h3>Research & Projects</h3>
-      <ul>
-        <li>
-          <strong>Project Title</strong> – Short one‐liner about your research, 
-          tools used, and outcomes.
-        </li>
-        <li>
-          <strong>Another Project Title</strong> – More details.
-        </li>
-      </ul>
-    </div>
-
-    <div class="cv-section">
-      <h3>Awards & Honors (Optional)</h3>
-      <ul>
-        <li>
-          <strong>Award Name</strong> – Awarding body, year.
-        </li>
-      </ul>
+      <a href="CV_MostafaMahdiYousef.pdf" class="download-cv">Download CV</a>
     </div>
 
   </div>
@@ -117,5 +121,6 @@
   <footer>
     &copy; 2025 Your Name. All rights reserved.
   </footer>
+
 </body>
 </html>
