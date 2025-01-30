@@ -134,4 +134,3 @@ This project is open-source. Feel free to fork, modify, and use it for personal 
 ## ✨ **Contributors**
 
 - **Mostafa Mahdi Yousef** – Electrical Engineer and Ph.D. researcher at York University.
-```
