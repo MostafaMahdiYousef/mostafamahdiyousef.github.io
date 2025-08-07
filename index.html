@@ -1,266 +1,368 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mostafa Mahdi Yousef</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon50.png" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        margin: 0;
+        font-family: "Poppins", "Segoe UI", Arial, sans-serif;
+        line-height: 1.6;
+        background: linear-gradient(135deg, #f6d365 0%, #fda085 100%);
+        color: #333;
+        animation: fadeIn 1s ease-in;
+      }
 
-<head>
-  <meta charset="UTF-8" />
-  <!-- Ensures the page is scaled correctly on mobile devices -->
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Mostafa Mahdi Yousef</title>
-  <link rel="icon" type="image/png" sizes="32x32" href="favicon50.png">
-  <style>
-    body {
-      margin: 0;
-      font-family: "Segoe UI", Arial, sans-serif;
-      line-height: 1.6;
-      background-color: #f2f2f2;
-      color: #333;
-    }
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
 
-    nav {
+      nav {
+        background: linear-gradient(90deg, #ff512f, #dd2476);
+        padding: 1em 2em;
+        text-align: left;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      }
 
-      background-color: #87CEEB;
-      /* Sky blue color */
+      nav a {
+        color: #fff;
+        margin: 0 1em;
+        text-decoration: none;
+        font-weight: bold;
+        transition: opacity 0.3s;
+      }
 
+      nav a:hover {
+        opacity: 0.7;
+      }
 
-      ;
-      padding: 1em 2em;
-      text-align: left;
-    }
+      .container {
+        max-width: 900px;
+        margin: 3em auto;
+        background-color: rgba(255, 255, 255, 0.9);
+        padding: 2.5em;
+        border-radius: 10px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      }
 
-    nav a {
-      color: #fff;
-      margin: 0 1em;
-      text-decoration: none;
-      font-weight: bold;
-    }
+      .profile-section {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        margin-bottom: 2em;
+      }
 
-    nav a:hover {
-      text-decoration: underline;
-    }
+      .profile-photo {
+        width: 120px;
+        height: 120px;
+        border: 10px solid #ff512f;
+        border-radius: 50%;
+        background-color: #ccc;
+        margin-right: 2em;
+        margin-bottom: 1em;
+        background-image: url("mostafa.jpeg");
+        background-size: cover;
+        background-position: center;
+        position: relative;
+        overflow: hidden;
+      }
 
-    .container {
-      max-width: 900px;
-      margin: 3em auto;
-      background-color: #fff;
-      padding: 2.5em;
-      border-radius: 10px;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    }
-
-    .profile-section {
-      display: flex;
-      flex-wrap: wrap;
-      /* Make it responsive for smaller screens */
-      align-items: center;
-      margin-bottom: 2em;
-    }
-
-    .profile-photo {
-      width: 120px;
-      height: 120px;
-      border: 10px solid blue;
-      border-radius: 50%;
-      background-color: #ccc;
-      margin-right: 2em;
-      margin-bottom: 1em;
-      background-image: url('mostafa.jpeg');
-      background-size: cover;
-      background-position: center;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .profile-photo::after {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: -100%;
-      width: 50%;
-      height: 100%;
-      background: linear-gradient(120deg,
+      .profile-photo::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 50%;
+        height: 100%;
+        background: linear-gradient(
+          120deg,
           rgba(255, 255, 255, 0) 0%,
           rgba(255, 255, 255, 0.6) 50%,
-          rgba(255, 255, 255, 0) 100%);
-      transform: skewX(-25deg);
-      animation: shine 2s infinite;
-    }
-
-    @keyframes shine {
-      0% {
-        left: -100%;
+          rgba(255, 255, 255, 0) 100%
+        );
+        transform: skewX(-25deg);
+        animation: shine 2s infinite;
       }
 
-      100% {
-        left: 150%;
+      @keyframes shine {
+        0% {
+          left: -100%;
+        }
+        100% {
+          left: 150%;
+        }
       }
-    }
 
-    .profile-details {
-      flex: 1;
-      /* So the text wraps nicely on smaller screens */
-      margin-bottom: 1em;
-    }
+      .profile-details {
+        flex: 1;
+        margin-bottom: 1em;
+      }
 
-    .profile-details h1 {
-      text-align: left;
-      font-size: 1em;
-      margin-bottom: 0.5em;
-      margin-top: 0;
+      .profile-details h1 {
+        text-align: left;
+        font-size: 1em;
+        margin-bottom: 0.5em;
+        margin-top: 0;
+      }
 
-    }
+      .profile-details p {
+        margin-bottom: 1em;
+      }
 
-    .profile-details p {
-      margin-bottom: 1em;
-    }
+      .social-links img {
+        width: 24px;
+        height: 24px;
+        margin-right: 0.5em;
+        vertical-align: middle;
+      }
 
-    .social-links img {
-      width: 24px;
-      height: 24px;
-      margin-right: 0.5em;
-      vertical-align: middle;
-    }
+      .social-links a {
+        color: #007acc;
+      }
 
-    .social-links a {
-      display: inline-flex;
-      align-items: center;
-      margin-bottom: 0.5em;
-    }
+      .location img {
+        width: 18px;
+        vertical-align: middle;
+        margin-right: 0.3em;
+      }
 
-    .location {
-      display: inline-flex;
-      align-items: center;
-    }
+      h2 {
+        color: #dd2476;
+        margin-top: 0;
+        font-size: 1.6em;
+      }
 
-    .location img {
-      width: 16px;
-      height: 16px;
-      margin-right: 4px;
-      vertical-align: middle;
-    }
+      footer {
+        text-align: center;
+        margin-top: 3em;
+        font-size: 0.9em;
+        color: #666;
+      }
 
-    h2 {
-      margin-top: 0;
-      font-size: 1.6em;
-      color: #007acc;
-    }
+      /* Chat widget styles */
+      .chat-toggle {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        background: linear-gradient(90deg, #ff512f, #dd2476);
+        color: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 30px;
+        cursor: pointer;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+        z-index: 1000;
+      }
 
-    footer {
-      text-align: center;
-      margin-top: 3em;
-      font-size: 0.9em;
-      color: #666;
-    }
-  </style>
-</head>
+      .chat-box {
+        position: fixed;
+        bottom: 90px;
+        right: 20px;
+        width: 300px;
+        background: #fff;
+        border-radius: 10px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+        transform: scale(0);
+        transform-origin: bottom right;
+        transition: transform 0.3s ease;
+        overflow: hidden;
+        z-index: 1000;
+      }
 
-<body>
+      .chat-box.open {
+        transform: scale(1);
+      }
 
-  <!-- Navigation bar -->
+      .chat-header {
+        background: linear-gradient(90deg, #ff512f, #dd2476);
+        color: #fff;
+        padding: 0.5em;
+        text-align: center;
+        font-weight: bold;
+      }
 
-  <nav>
-    <a href="index.html">About Me</a>
-    <a href="cv.html">CV</a>
-  </nav>
+      .chat-body {
+        padding: 1em;
+        display: flex;
+        flex-direction: column;
+      }
 
-  <div class="container">
-    <!-- Profile section -->
-    <div class="profile-section">
-      <!-- Profile photo -->
-      <div class="profile-photo"></div>
+      .chat-body input,
+      .chat-body textarea {
+        margin-bottom: 0.5em;
+        padding: 0.5em;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        font-family: inherit;
+      }
 
-      <div class="profile-details">
-        <h1>Mostafa Mahdi Yousef</h1>
-        <!-- Short description -->
-        <p>
-          Electrical Engineer and Ph.D. researcher at York University,
-          specializing
-          in EV on-board chargers with V2X capability and advanced SoC
-          estimation methods.
-        </p>
+      .chat-body button {
+        padding: 0.5em;
+        background: #ff512f;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background 0.3s;
+      }
 
-        <!-- Social Links -->
-        <div class="social-links">
-          <a href="https://x.com/MMahdiyousef" target="_blank">
-            <img src="twitter.jpg" alt="Twitter icon" />
-            Twitter
-          </a>
-          <br />
-          <a href="https://www.linkedin.com/in/mostafa-mahdi-yousef/"
-            target="_blank">
-            <img src="linkedin.png" alt="LinkedIn icon" />
-            LinkedIn
-          </a>
+      .chat-body button:hover {
+        background: #dd2476;
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <a href="index.html">About Me</a>
+      <a href="cv.html">CV</a>
+    </nav>
 
-
-          <br />
-          <a href="https://github.com/MostafaMahdiYousef" target="_blank">
-            <img src="github.jpg" alt="Github icon" />
-            Github
-          </a>
-
-          <br />
-          <a href="" target="_blank">
-            <img src="ieee.jpg" alt="IEEE icon" />
-            IEEE
-          </a>
-
-          <br />
-          <a href="https://scholar.google.com/citations?user=TAt6sjcAAAAJ&hl=en"
-            target="_blank">
-            <img src="scholar.png" alt="Google Scholar icon" />
-            Google Scholar
-          </a>
-
+    <div class="container">
+      <div class="profile-section">
+        <div class="profile-photo"></div>
+        <div class="profile-details">
+          <h1>Mostafa Mahdi Yousef</h1>
+          <p>
+            Electrical Engineer and Ph.D. researcher at York University,
+            specializing in EV on-board chargers with V2X capability and
+            advanced SoC estimation methods.
+          </p>
+          <div class="social-links">
+            <a href="https://x.com/MMahdiyousef" target="_blank">
+              <img src="twitter.jpg" alt="Twitter icon" />
+              Twitter
+            </a>
+            <br />
+            <a
+              href="https://www.linkedin.com/in/mostafa-mahdi-yousef/"
+              target="_blank"
+            >
+              <img src="linkedin.png" alt="LinkedIn icon" />
+              LinkedIn
+            </a>
+            <br />
+            <a href="https://github.com/MostafaMahdiYousef" target="_blank">
+              <img src="github.jpg" alt="Github icon" />
+              Github
+            </a>
+            <br />
+            <a href="" target="_blank">
+              <img src="ieee.jpg" alt="IEEE icon" />
+              IEEE
+            </a>
+            <br />
+            <a
+              href="https://scholar.google.com/citations?user=TAt6sjcAAAAJ&hl=en"
+              target="_blank"
+            >
+              <img src="scholar.png" alt="Google Scholar icon" />
+              Google Scholar
+            </a>
+          </div>
+          <p class="location">
+            <img src="location.png" alt="Location icon" />
+            Toronto, Canada
+          </p>
         </div>
+      </div>
 
-        <!-- Location -->
-        <p class="location">
-          <img src="location.png" alt="Location icon" />
-          Toronto, Canada
+      <hr />
+      <h2>Hello | Bonjour | नमस्ते | 你好 | سلام!</h2>
+      <p>
+        Welcome to my personal website! I am Mostafa Mahdi Yousef, an Electrical
+        Engineer and Ph.D. researcher at York University, specializing in the
+        cutting-edge development of EV on-board chargers with V2X capability and
+        advanced State of Charge (SoC) estimation techniques. With a foundation
+        of excellence from Sharif University of Technology—where I designed
+        dynamic state estimation methods for power systems—and a B.Sc. in
+        optimizing solar energy through MPPT algorithms, I blend innovation with
+        technical expertise. My professional journey includes immersive industry
+        experience at one of the largest power plants in the Middle East. From
+        renewable energy systems to smart grids, I am passionate about driving
+        sustainable advancements in power electronics and control systems. Let’s
+        innovate the future of clean energy together!
+      </p>
+      <hr />
+      <p style="color: blue; font-size:0.2em line-height: 1.6; margin: 10px 0;">
+        I designed and developed this open-source website from the ground up
+        using only HTML and CSS, focusing on simplicity and efficiency. You are
+        welcome to fork the repository from my
+        <a
+          href="https://github.com/MostafaMahdiYousef"
+          target="_blank"
+          style="color: blue; text-decoration: underline"
+          >GitHub</a
+        >
+        to use it as a template for your personal website.
+      </p>
+    </div>
 
-        </p>
+    <div id="chat-toggle" class="chat-toggle">💬</div>
+    <div id="chat-box" class="chat-box">
+      <div class="chat-header">Chat with me</div>
+      <div class="chat-body">
+        <input type="email" id="chatEmail" placeholder="Your email" />
+        <textarea
+          id="chatMessage"
+          placeholder="Type your message..."
+        ></textarea>
+        <button id="chatSend">Send</button>
       </div>
     </div>
 
+    <footer>&copy; 2025 Mostafa Mahdi Yousef. All rights reserved.</footer>
 
-    <hr />
-    <!-- About section or introduction -->
-    <h2>Hello | Bonjour | नमस्ते | 你好 | سلام!</h2>
-    <p>
-      Welcome to my personal website! I am Mostafa Mahdi Yousef, an Electrical
-      Engineer and Ph.D.
-      researcher at York University, specializing in the cutting-edge
-      development of EV on-board
-      chargers with V2X capability and advanced State of Charge (SoC) estimation
-      techniques.
-      With a foundation of excellence from Sharif University of Technology—where
-      I designed dynamic
-      state estimation methods for power systems—and a B.Sc. in optimizing solar
-      energy through MPPT
-      algorithms, I blend innovation with technical expertise. My professional
-      journey includes immersive
-      industry experience at one of the largest power plants in the Middle East.
-      From renewable energy systems
-      to smart grids, I am passionate about driving sustainable advancements in
-      power electronics and control systems.
-      Let’s innovate the future of clean energy together!
-    </p>
-    <hr />
-    <p style="color: blue; font-size:0.2em line-height: 1.6; margin: 10px 0;">
-      I designed and developed this open-source website from the ground up using
-      only HTML and CSS, focusing on simplicity and efficiency.
-      You are welcome to fork the repository from my <a
-        href="https://github.com/MostafaMahdiYousef" target="_blank"
-        style="color: blue; text-decoration: underline;">GitHub</a> to use it as
-      a template for your personal website.
-    </p>
-  </div>
-
-  <!-- Footer -->
-  <footer>
-
-    &copy; 2025 Mostafa Mahdi Yousef. All rights reserved.
-  </footer>
-</body>
-
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+    <script>
+      (function () {
+        emailjs.init("QFVHCRbVW2qQf7BEa");
+      })();
+      const toggle = document.getElementById("chat-toggle");
+      const box = document.getElementById("chat-box");
+      toggle.addEventListener("click", () => {
+        box.classList.toggle("open");
+      });
+      document
+        .getElementById("chatSend")
+        .addEventListener("click", function () {
+          const email = document.getElementById("chatEmail").value;
+          const message = document.getElementById("chatMessage").value;
+          if (!email || !message) {
+            alert("Please enter email and message");
+            return;
+          }
+          emailjs
+            .send("service_qysnhll", "template_oytol8q", {
+              from_email: email,
+              message: message,
+              to_email: "mostafamahdiyouse@gmail.com",
+            })
+            .then(
+              function () {
+                alert("Message sent!");
+                document.getElementById("chatEmail").value = "";
+                document.getElementById("chatMessage").value = "";
+              },
+              function (error) {
+                alert("Failed to send message");
+              },
+            );
+        });
+    </script>
+  </body>
 </html>
