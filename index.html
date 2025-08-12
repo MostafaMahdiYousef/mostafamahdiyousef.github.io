@@ -160,10 +160,12 @@
       .greeting {
         position: absolute;
         white-space: nowrap;
-        animation: zigzag 20s linear infinite;
         background: linear-gradient(90deg, #ff512f, #dd2476);
+        background-size: 200% 200%;
+        background-position: 0% 50%;
         -webkit-background-clip: text;
         color: transparent;
+        animation: zigzag 20s linear infinite, gradientShift 6s ease-in-out infinite;
       }
 
       @keyframes zigzag {
@@ -190,6 +192,18 @@
         100% {
           left: 100%;
           top: 0;
+        }
+      }
+
+      @keyframes gradientShift {
+        0% {
+          background-position: 0% 50%;
+        }
+        50% {
+          background-position: 100% 50%;
+        }
+        100% {
+          background-position: 0% 50%;
         }
       }
 
