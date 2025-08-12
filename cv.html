@@ -7,32 +7,48 @@
   <!-- SEO metadata -->
   <script src="assets/seo.js"></script>
   <title>Mostafa Mahdi Yousef - CV</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap"
+    rel="stylesheet"
+  />
   <style>
     body {
       margin: 0;
-      font-family: "Segoe UI", Arial, sans-serif;
+      font-family: "Poppins", "Segoe UI", Arial, sans-serif;
       line-height: 1.6;
-      background-color: #f2f2f2;
+      background: linear-gradient(135deg, #f6d365 0%, #fda085 100%);
       color: #333;
+      animation: fadeIn 1s ease-in;
+      overflow-x: hidden;
+    }
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
     }
     nav {
-      background-color: #87CEEB;
+      background: linear-gradient(90deg, #ff512f, #dd2476);
       padding: 1em 2em;
       text-align: left;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     }
     nav a {
       color: #fff;
       margin: 0 1em;
       text-decoration: none;
       font-weight: bold;
+      transition: opacity 0.3s;
     }
     nav a:hover {
-      text-decoration: underline;
+      opacity: 0.7;
     }
     .container {
       max-width: 900px;
       margin: 3em auto;
-      background-color: #fff;
+      background-color: rgba(255, 255, 255, 0.9);
       padding: 2.5em;
       border-radius: 10px;
       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
@@ -50,10 +66,10 @@
       margin-bottom: 1.5em;
     }
     h3 {
-      border-left: 4px solid #007acc;
+      border-left: 4px solid #ff512f;
       padding-left: 10px;
       margin-bottom: 1em;
-      color: #007acc;
+      color: #ff512f;
     }
     .cv-section {
       margin-bottom: 2.5em;
@@ -76,31 +92,96 @@
     }
     .highlight {
       font-weight: bold;
-      color: #007acc;
+      color: #ff512f;
     }
     a.download-cv {
       display: inline-block;
       margin: 1.5em 0 0;
       padding: 0.8em 1.5em;
       color: #fff;
-      background-color: #007acc;
+      background: linear-gradient(90deg, #ff512f, #dd2476);
       text-decoration: none;
       border-radius: 5px;
       font-weight: bold;
       text-align: center;
       font-size: 1em;
+      transition: opacity 0.3s;
     }
     a.download-cv:hover {
-      background-color: #C4E538;
-    }
-        a.download-cv:avtive {
-      background-color: #B53471;
+      opacity: 0.8;
     }
     footer {
       text-align: center;
       margin-top: 3em;
       font-size: 0.9em;
       color: #666;
+    }
+    /* Chat widget styles */
+    .chat-toggle {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      background: linear-gradient(90deg, #ff512f, #dd2476);
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 30px;
+      cursor: pointer;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+      z-index: 1000;
+    }
+    .chat-box {
+      position: fixed;
+      bottom: 90px;
+      right: 20px;
+      width: 300px;
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+      transform: scale(0);
+      transform-origin: bottom right;
+      transition: transform 0.3s ease;
+      overflow: hidden;
+      z-index: 1000;
+    }
+    .chat-box.open {
+      transform: scale(1);
+    }
+    .chat-header {
+      background: linear-gradient(90deg, #ff512f, #dd2476);
+      color: #fff;
+      padding: 0.5em;
+      text-align: center;
+      font-weight: bold;
+    }
+    .chat-body {
+      padding: 1em;
+      display: flex;
+      flex-direction: column;
+    }
+    .chat-body input,
+    .chat-body textarea {
+      margin-bottom: 0.5em;
+      padding: 0.5em;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-family: inherit;
+    }
+    .chat-body button {
+      padding: 0.5em;
+      background: #ff512f;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+    .chat-body button:hover {
+      background: #dd2476;
     }
   </style>
 </head>
@@ -148,11 +229,56 @@
  
     </div>
   </div>
+  <div id="chat-toggle" class="chat-toggle">💬</div>
+  <div id="chat-box" class="chat-box">
+    <div class="chat-header">Chat with me</div>
+    <div class="chat-body">
+      <input type="email" id="chatEmail" placeholder="Your email" />
+      <textarea id="chatMessage" placeholder="Type your message..."></textarea>
+      <button id="chatSend">Send</button>
+    </div>
+  </div>
 
   <!-- Footer -->
   <footer>
     &copy; 2025 Mostafa Mahdi Yousef. All rights reserved.
   </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+  <script>
+    (function () {
+      emailjs.init("QFVHCRbVW2qQf7BEa");
+    })();
+    const toggle = document.getElementById("chat-toggle");
+    const box = document.getElementById("chat-box");
+    toggle.addEventListener("click", () => {
+      box.classList.toggle("open");
+    });
+    document.getElementById("chatSend").addEventListener("click", function () {
+      const email = document.getElementById("chatEmail").value;
+      const message = document.getElementById("chatMessage").value;
+      if (!email || !message) {
+        alert("Please enter email and message");
+        return;
+      }
+      emailjs
+        .send("service_qysnhll", "template_oytol8q", {
+          from_email: email,
+          message: message,
+          to_email: "mostafamahdiyouse@gmail.com",
+        })
+        .then(
+          function () {
+            alert("Message sent!");
+            document.getElementById("chatEmail").value = "";
+            document.getElementById("chatMessage").value = "";
+          },
+          function (error) {
+            alert("Failed to send message");
+          }
+        );
+    });
+  </script>
 
 </body>
 </html>
