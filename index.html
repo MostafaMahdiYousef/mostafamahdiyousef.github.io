@@ -151,33 +151,64 @@
         font-size: 1.6em;
       }
 
+      .greeting-wrapper {
+        position: relative;
+        overflow: hidden;
+        height: 2em;
+      }
+
       .greeting {
-        display: inline-block;
+        position: absolute;
         white-space: nowrap;
-        animation: zigzag 8s linear infinite;
         background: linear-gradient(90deg, #ff512f, #dd2476);
+        background-size: 200% 200%;
+        background-position: 0% 50%;
         -webkit-background-clip: text;
         color: transparent;
+        animation: zigzag 20s linear infinite, gradientShift 6s ease-in-out infinite;
+
+
+
       }
 
       @keyframes zigzag {
         0% {
-          transform: translate(-100vw, 0);
+
+          left: -100%;
+          top: 0;
         }
         20% {
-          transform: translate(-60vw, -20px);
+          left: -60%;
+          top: -10px;
         }
         40% {
-          transform: translate(-20vw, 20px);
+          left: -20%;
+          top: 10px;
         }
         60% {
-          transform: translate(20vw, -20px);
+          left: 20%;
+          top: -10px;
         }
         80% {
-          transform: translate(60vw, 20px);
+          left: 60%;
+          top: 10px;
         }
         100% {
-          transform: translate(100vw, 0);
+          left: 100%;
+          top: 0;
+        }
+      }
+
+      @keyframes gradientShift {
+        0% {
+          background-position: 0% 50%;
+        }
+        50% {
+          background-position: 100% 50%;
+        }
+        100% {
+          background-position: 0% 50%;
+
         }
       }
 
@@ -318,9 +349,12 @@
           </p>
         </div>
       </div>
-
+      
       <hr />
-      <h2 class="greeting">Hello | Bonjour | नमस्ते | 你好 | سلام!</h2>
+      <div class="greeting-wrapper">
+        <h2 class="greeting">Hello | Bonjour | नमस्ते | 你好 | سلام!</h2>
+      </div>
+
       <p>
         Welcome to my personal website! I am Mostafa Mahdi Yousef, an Electrical
         Engineer and Ph.D. researcher at York University, specializing in the
@@ -336,7 +370,7 @@
         innovate the future of clean energy together!
       </p>
       <hr />
-      <p style="color: blue; font-size:0.2em line-height: 1.6; margin: 10px 0;">
+        <p style="color: blue; font-size:0.2em; line-height: 1.6; margin: 10px 0;">
         I designed and developed this open-source website from the ground up
         using only HTML and CSS, focusing on simplicity and efficiency. You are
         welcome to fork the repository from my
