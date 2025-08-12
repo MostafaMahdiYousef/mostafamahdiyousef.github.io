@@ -45,10 +45,10 @@ You can edit the following sections inside the **`index.html`** file:
    You can modify or add greetings to match your target audience.
 
 3. **Profile Picture**
-   Replace the image file `mostafa.jpeg` with your own image and ensure the file name is updated here:
+   Replace the image file `assets/images/mostafa.jpeg` with your own image and ensure the file name is updated here:
    ```css
    .profile-photo {
-     background-image: url('mostafa.jpeg');
+     background-image: url('assets/images/mostafa.jpeg');
    }
    ```
 
@@ -83,7 +83,7 @@ You can edit the education and other sections inside the **`cv.html`** file:
 
 3. **Replace the CV download link**
    ```html
-   <a href="Your_CV_File.pdf" class="download-cv">Download CV</a>
+   <a href="assets/docs/Your_CV_File.pdf" class="download-cv">Download CV</a>
    ```
 
 4. **Update the supervisor or project details if needed**.
@@ -106,10 +106,10 @@ nav {
 
 ## 🖼️ **Replacing Image Files**
 
-You can replace the following image files in the root directory:
+You can replace the following image files in the `assets/images` directory:
 
-- **`mostafa.jpeg`** – Your profile photo.
-- **`linkedin.png`**, **`twitter.jpg`**, **`location.png`** – Social and location icons.
+- **`assets/images/mostafa.jpeg`** – Your profile photo.
+- **`assets/images/linkedin.png`**, **`assets/images/twitter.jpg`**, **`assets/images/location.png`** – Social and location icons.
 
 Make sure the image names and paths are correctly referenced in the HTML files.
 
