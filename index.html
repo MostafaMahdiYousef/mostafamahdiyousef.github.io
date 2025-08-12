@@ -17,6 +17,7 @@
         background: linear-gradient(135deg, #f6d365 0%, #fda085 100%);
         color: #333;
         animation: fadeIn 1s ease-in;
+        overflow-x: hidden;
       }
 
       @keyframes fadeIn {
@@ -129,6 +130,13 @@
 
       .social-links a {
         color: #007acc;
+        display: inline-block;
+        transition: transform 0.3s, color 0.3s;
+      }
+
+      .social-links a:hover {
+        transform: scale(1.1);
+        color: #ff512f;
       }
 
       .location img {
@@ -141,6 +149,48 @@
         color: #dd2476;
         margin-top: 0;
         font-size: 1.6em;
+      }
+
+      .greeting-wrapper {
+        position: relative;
+        overflow: hidden;
+        height: 2em;
+      }
+
+      .greeting {
+        position: absolute;
+        white-space: nowrap;
+        animation: zigzag 20s linear infinite;
+        background: linear-gradient(90deg, #ff512f, #dd2476);
+        -webkit-background-clip: text;
+        color: transparent;
+      }
+
+      @keyframes zigzag {
+        0% {
+          left: -100%;
+          top: 0;
+        }
+        20% {
+          left: -60%;
+          top: -10px;
+        }
+        40% {
+          left: -20%;
+          top: 10px;
+        }
+        60% {
+          left: 20%;
+          top: -10px;
+        }
+        80% {
+          left: 60%;
+          top: 10px;
+        }
+        100% {
+          left: 100%;
+          top: 0;
+        }
       }
 
       footer {
@@ -282,7 +332,9 @@
       </div>
 
       <hr />
-      <h2>Hello | Bonjour | नमस्ते | 你好 | سلام!</h2>
+      <div class="greeting-wrapper">
+        <h2 class="greeting">Hello | Bonjour | नमस्ते | 你好 | سلام!</h2>
+      </div>
       <p>
         Welcome to my personal website! I am Mostafa Mahdi Yousef, an Electrical
         Engineer and Ph.D. researcher at York University, specializing in the
