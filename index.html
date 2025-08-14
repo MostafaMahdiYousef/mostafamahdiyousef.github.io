@@ -12,7 +12,297 @@
       rel="stylesheet"
     />
 
+    <style>
+      :root {
+        --accent-color: #1e90ff;
+      }
+
+      body {
+        margin: 0;
+        font-family: "Poppins", "Segoe UI", Arial, sans-serif;
+        line-height: 1.6;
+        background: linear-gradient(135deg, #f6d365 0%, #fda085 100%);
+        color: #333;
+        animation: fadeIn 1s ease-in;
+        overflow-x: hidden;
+      }
+
     <link rel="stylesheet" href="assets/styles.css" />
+
+      nav {
+        background: linear-gradient(90deg, #ff512f, #dd2476);
+        padding: 1em 2em;
+        text-align: left;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      }
+
+      nav a {
+        color: #fff;
+        margin: 0 1em;
+        text-decoration: none;
+        font-weight: bold;
+        transition: color 0.3s;
+      }
+
+      nav a:hover {
+        color: var(--accent-color);
+      }
+
+      a {
+        color: inherit;
+        text-decoration: underline;
+      }
+
+      a:hover {
+        color: var(--accent-color);
+      }
+
+      .container {
+        max-width: 900px;
+        margin: 3em auto;
+        background-color: rgba(255, 255, 255, 0.9);
+        padding: 2.5em;
+        border-radius: 10px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      }
+
+      .profile-section {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        margin-bottom: 2em;
+      }
+
+      .profile-photo {
+        width: 120px;
+        height: 120px;
+        border: 10px solid var(--accent-color);
+        border-radius: 50%;
+        background-color: #ccc;
+        margin-right: 2em;
+        margin-bottom: 1em;
+        background-image: url("assets/images/mostafa.jpeg");
+        background-size: cover;
+        background-position: center;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .profile-photo::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 50%;
+        height: 100%;
+        background: linear-gradient(
+          120deg,
+          rgba(255, 255, 255, 0) 0%,
+          rgba(255, 255, 255, 0.6) 50%,
+          rgba(255, 255, 255, 0) 100%
+        );
+        transform: skewX(-25deg);
+        animation: shine 2s infinite;
+      }
+
+      @keyframes shine {
+        0% {
+          left: -100%;
+        }
+        100% {
+          left: 150%;
+        }
+      }
+
+      .profile-details {
+        flex: 1;
+        margin-bottom: 1em;
+      }
+
+      .profile-details h1 {
+        text-align: left;
+        font-size: 1em;
+        margin-bottom: 0.5em;
+        margin-top: 0;
+      }
+
+      .profile-details p {
+        margin-bottom: 1em;
+      }
+
+      .social-links img {
+        width: 24px;
+        height: 24px;
+        margin-right: 0.5em;
+        vertical-align: middle;
+      }
+
+      .social-links a {
+        display: inline-block;
+        transition: transform 0.3s, color 0.3s;
+      }
+
+      .social-links a:hover {
+        transform: scale(1.1);
+      }
+
+      .location img {
+        width: 18px;
+        vertical-align: middle;
+        margin-right: 0.3em;
+      }
+
+      h2 {
+        color: var(--accent-color);
+        margin-top: 0;
+        font-size: 1.6em;
+      }
+
+      .greeting-wrapper {
+        position: relative;
+        overflow: hidden;
+        height: 2em;
+      }
+
+      .greeting {
+        position: absolute;
+        white-space: nowrap;
+        background: linear-gradient(90deg, var(--accent-color), #dd2476);
+        background-size: 200% 200%;
+        background-position: 0% 50%;
+        -webkit-background-clip: text;
+        color: transparent;
+        animation: zigzag 20s linear infinite, gradientShift 6s ease-in-out infinite;
+      }
+
+      @keyframes zigzag {
+        0% {
+
+          left: -100%;
+          top: 0;
+        }
+        20% {
+          left: -60%;
+          top: -10px;
+        }
+        40% {
+          left: -20%;
+          top: 10px;
+        }
+        60% {
+          left: 20%;
+          top: -10px;
+        }
+        80% {
+          left: 60%;
+          top: 10px;
+        }
+        100% {
+          left: 100%;
+          top: 0;
+        }
+      }
+
+      @keyframes gradientShift {
+        0% {
+          background-position: 0% 50%;
+        }
+        50% {
+          background-position: 100% 50%;
+        }
+        100% {
+          background-position: 0% 50%;
+
+        }
+      }
+
+      footer {
+        text-align: center;
+        margin-top: 3em;
+        font-size: 0.9em;
+        color: #666;
+      }
+
+      /* Chat widget styles */
+      .chat-toggle {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        background: var(--accent-color);
+        color: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 30px;
+        cursor: pointer;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+        z-index: 1000;
+      }
+
+      .chat-box {
+        position: fixed;
+        bottom: 90px;
+        right: 20px;
+        width: 300px;
+        background: #fff;
+        border-radius: 10px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+        transform: scale(0);
+        transform-origin: bottom right;
+        transition: transform 0.3s ease;
+        overflow: hidden;
+        z-index: 1000;
+      }
+
+      .chat-box.open {
+        transform: scale(1);
+      }
+
+      .chat-header {
+        background: var(--accent-color);
+        color: #fff;
+        padding: 0.5em;
+        text-align: center;
+        font-weight: bold;
+      }
+
+      .chat-body {
+        padding: 1em;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .chat-body input,
+      .chat-body textarea {
+        margin-bottom: 0.5em;
+        padding: 0.5em;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        font-family: inherit;
+      }
+
+      .chat-body button {
+        padding: 0.5em;
+        background: var(--accent-color);
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: opacity 0.3s;
+      }
+
+      .chat-body button:hover {
+        opacity: 0.85;
+      }
+
+      hr {
+        border: none;
+        border-top: 2px solid var(--accent-color);
+      }
+    </style>
 
   </head>
   <body>
@@ -90,15 +380,16 @@
         innovate the future of clean energy together!
       </p>
       <hr />
-        <p class="note">
+
+        <p style="font-size:0.2em; line-height: 1.6; margin: 10px 0;">
 
         I designed and developed this open-source website from the ground up
         using only HTML and CSS, focusing on simplicity and efficiency. You are
         welcome to fork the repository from my
         <a
-              href="https://github.com/MostafaMahdiYousef"
-              target="_blank"
-              class="note-link"
+
+          href="https://github.com/MostafaMahdiYousef"
+          target="_blank"
           >GitHub</a
         >
         to use it as a template for your personal website.
