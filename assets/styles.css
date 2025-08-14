@@ -1,0 +1,403 @@
+/* ===========================
+   Base Styles
+   =========================== */
+
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Typography */
+body {
+  font-family: "Poppins", "Segoe UI", Arial, sans-serif;
+  line-height: 1.6;
+  color: var(--text-color);
+}
+
+/* Colors */
+:root {
+  --primary-color: #ff512f;
+  --secondary-color: #dd2476;
+  --text-color: #333;
+  --background-gradient-start: #f6d365;
+  --background-gradient-end: #fda085;
+}
+
+body {
+  background: linear-gradient(
+    135deg,
+    var(--background-gradient-start) 0%,
+    var(--background-gradient-end) 100%
+  );
+  animation: fadeIn 1s ease-in;
+  overflow-x: hidden;
+}
+
+/* ===========================
+   Layout
+   =========================== */
+
+nav {
+  background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+  padding: 1em 2em;
+  text-align: left;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.container {
+  max-width: 900px;
+  margin: 3em auto;
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 2.5em;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.profile-section {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-bottom: 2em;
+}
+
+.profile-details {
+  flex: 1;
+  margin-bottom: 1em;
+}
+
+.profile-details h1 {
+  text-align: left;
+  font-size: 1em;
+  margin-bottom: 0.5em;
+  margin-top: 0;
+}
+
+.profile-details p {
+  margin-bottom: 1em;
+}
+
+.greeting-wrapper {
+  position: relative;
+  overflow: hidden;
+  height: 2em;
+}
+
+footer {
+  text-align: center;
+  margin-top: 3em;
+  font-size: 0.9em;
+  color: #666;
+}
+
+/* ===========================
+   Components
+   =========================== */
+
+/* Navigation Links */
+nav a {
+  color: #fff;
+  margin: 0 1em;
+  text-decoration: none;
+  font-weight: bold;
+  transition: opacity 0.3s;
+}
+
+nav a:hover {
+  opacity: 0.7;
+}
+
+/* Profile Photo */
+.profile-photo {
+  width: 120px;
+  height: 120px;
+  border: 10px solid var(--primary-color);
+  border-radius: 50%;
+  background-color: #ccc;
+  margin-right: 2em;
+  margin-bottom: 1em;
+  background-image: url("assets/images/mostafa.jpeg");
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.profile-photo::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(
+    120deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.6) 50%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  transform: skewX(-25deg);
+  animation: shine 2s infinite;
+}
+
+/* Social Links */
+.social-links img {
+  width: 24px;
+  height: 24px;
+  margin-right: 0.5em;
+  vertical-align: middle;
+}
+
+.social-links a {
+  color: #007acc;
+  display: inline-block;
+  transition: transform 0.3s, color 0.3s;
+}
+
+.social-links a:hover {
+  transform: scale(1.1);
+  color: var(--primary-color);
+}
+
+/* Location */
+.location img {
+  width: 18px;
+  vertical-align: middle;
+  margin-right: 0.3em;
+}
+
+/* CV Sections */
+h1 {
+  text-align: center;
+  font-size: 2em;
+  margin-bottom: 0.5em;
+  margin-top: 0;
+}
+
+h2 {
+  text-align: center;
+  font-size: 1.5em;
+  color: #555;
+  margin-bottom: 1.5em;
+}
+
+h3 {
+  border-left: 4px solid var(--primary-color);
+  padding-left: 10px;
+  margin-bottom: 1em;
+  color: var(--primary-color);
+}
+
+.cv-section {
+  margin-bottom: 2.5em;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  margin-bottom: 1.5em;
+  line-height: 1.6;
+}
+
+.degree-title {
+  font-weight: bold;
+  font-size: 1.1em;
+  color: var(--text-color);
+}
+
+.details {
+  color: #666;
+}
+
+.highlight {
+  font-weight: bold;
+  color: var(--primary-color);
+}
+
+.note {
+  color: blue;
+  font-size: 0.2em;
+  line-height: 1.6;
+  margin: 10px 0;
+}
+
+.note-link {
+  color: blue;
+  text-decoration: underline;
+}
+
+a.download-cv {
+  display: inline-block;
+  margin: 1.5em 0 0;
+  padding: 0.8em 1.5em;
+  color: #fff;
+  background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  text-align: center;
+  font-size: 1em;
+  transition: opacity 0.3s;
+}
+
+a.download-cv:hover {
+  opacity: 0.8;
+}
+
+/* Greeting */
+.greeting {
+  position: absolute;
+  white-space: nowrap;
+  background: linear-gradient(
+    90deg,
+    var(--primary-color),
+    var(--secondary-color)
+  );
+  background-size: 200% 200%;
+  background-position: 0% 50%;
+  -webkit-background-clip: text;
+  color: transparent;
+  margin: 0;
+  animation: zigzag 20s linear infinite, gradientShift 6s ease-in-out infinite;
+}
+
+/* Chat widget */
+.chat-toggle {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 30px;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+}
+
+.chat-box {
+  position: fixed;
+  bottom: 90px;
+  right: 20px;
+  width: 300px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  transform: scale(0);
+  transform-origin: bottom right;
+  transition: transform 0.3s ease;
+  overflow: hidden;
+  z-index: 1000;
+}
+
+.chat-box.open {
+  transform: scale(1);
+}
+
+.chat-header {
+  background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+  color: #fff;
+  padding: 0.5em;
+  text-align: center;
+  font-weight: bold;
+}
+
+.chat-body {
+  padding: 1em;
+  display: flex;
+  flex-direction: column;
+}
+
+.chat-body input,
+.chat-body textarea {
+  margin-bottom: 0.5em;
+  padding: 0.5em;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-family: inherit;
+}
+
+.chat-body button {
+  padding: 0.5em;
+  background: var(--primary-color);
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.chat-body button:hover {
+  background: var(--secondary-color);
+}
+
+/* ===========================
+   Animations
+   =========================== */
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes shine {
+  0% {
+    left: -100%;
+  }
+  100% {
+    left: 150%;
+  }
+}
+
+@keyframes zigzag {
+  0% {
+    left: -100%;
+    top: 0;
+  }
+  20% {
+    left: -60%;
+    top: -10px;
+  }
+  40% {
+    left: -20%;
+    top: 10px;
+  }
+  60% {
+    left: 20%;
+    top: -10px;
+  }
+  80% {
+    left: 60%;
+    top: 10px;
+  }
+  100% {
+    left: 100%;
+    top: 0;
+  }
+}
+
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+

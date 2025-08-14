@@ -8,9 +8,10 @@
   <script src="assets/seo.js"></script>
   <title>Mostafa Mahdi Yousef - CV</title>
   <link
-    href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Poppins:wght@300;400;600&display=swap"
     rel="stylesheet"
   />
+
   <style>
     :root {
       --accent-color: #1e90ff;
@@ -196,22 +197,24 @@
       opacity: 0.85;
     }
   </style>
+
 </head>
 <body>
 
   <!-- Navigation bar -->
-  <nav>
+  <nav class="fade-in">
     <a href="index.html">About Me</a>
     <a href="cv.html">CV</a>
   </nav>
 
   <!-- Container for CV content -->
-  <div class="container">
+  <div class="container fade-in">
     <h1>Mostafa Mahdi Yousef</h1>
     <h2>Curriculum Vitae</h2>
-     <a href="assets/docs/CV_MostafaMahdiYousef.pdf" class="download-cv">Download CV</a>
+    <a href="assets/docs/CV_MostafaMahdiYousef.pdf" class="download-cv">Download CV</a>
+
     <!-- Education Section -->
-    <div class="cv-section">
+    <div class="cv-section fade-in">
       <h3>Education</h3>
       <ul>
         <li>
@@ -238,9 +241,10 @@
           solar energy extraction.
         </li>
       </ul>
- 
     </div>
   </div>
+
+  <!-- Chat widget -->
   <div id="chat-toggle" class="chat-toggle">💬</div>
   <div id="chat-box" class="chat-box">
     <div class="chat-header">Chat with me</div>
@@ -252,10 +256,11 @@
   </div>
 
   <!-- Footer -->
-  <footer>
+  <footer class="fade-in">
     &copy; 2025 Mostafa Mahdi Yousef. All rights reserved.
   </footer>
 
+  <!-- Chat widget JS -->
   <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
   <script>
     (function () {
