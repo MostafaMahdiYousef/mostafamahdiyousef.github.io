@@ -12,6 +12,7 @@
       rel="stylesheet"
     />
 
+    <link rel="stylesheet" href="assets/styles.css" />
     <style>
       :root {
 
@@ -35,8 +36,15 @@
         animation: fadeIn 1s ease-in;
         overflow-x: hidden;
       }
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
 
-    <link rel="stylesheet" href="assets/styles.css" />
 
       nav {
         background: linear-gradient(90deg, #ff512f, #dd2476);
