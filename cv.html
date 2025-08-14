@@ -29,6 +29,23 @@
         opacity: 1;
       }
     }
+    .fade-in {
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeInUp 0.7s ease-out forwards;
+      animation-timeline: view();
+      animation-range: entry 0% cover 30%;
+    }
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
     nav {
       background: linear-gradient(90deg, #ff512f, #dd2476);
       padding: 1em 2em;
@@ -188,18 +205,18 @@
 <body>
 
   <!-- Navigation bar -->
-  <nav>
+  <nav class="fade-in">
     <a href="index.html">About Me</a>
     <a href="cv.html">CV</a>
   </nav>
 
   <!-- Container for CV content -->
-  <div class="container">
+  <div class="container fade-in">
     <h1>Mostafa Mahdi Yousef</h1>
     <h2>Curriculum Vitae</h2>
      <a href="assets/docs/CV_MostafaMahdiYousef.pdf" class="download-cv">Download CV</a>
     <!-- Education Section -->
-    <div class="cv-section">
+    <div class="cv-section fade-in">
       <h3>Education</h3>
       <ul>
         <li>
@@ -240,7 +257,7 @@
   </div>
 
   <!-- Footer -->
-  <footer>
+  <footer class="fade-in">
     &copy; 2025 Mostafa Mahdi Yousef. All rights reserved.
   </footer>
 
