@@ -92,7 +92,7 @@ You can edit the education and other sections inside the **`cv.html`** file:
 
 ## 🎨 **Styling and Layout Changes**
 
-The styles are defined in the **`<style>`** section within each HTML file.  
+All site styles reside in `assets/styles.css`, organized into Base Styles, Layout, Components, and Animations sections.  
 You can change colors, fonts, and spacing as needed.
 
 Example: To change the navigation bar color:
