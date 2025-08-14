@@ -11,213 +11,7 @@
     href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Poppins:wght@300;400;600&display=swap"
     rel="stylesheet"
   />
-    <link rel="stylesheet" href="assets/css/animations.css" />
-  <style>
-    /* Typography */
-    body {
-      margin: 0;
-      font-family: "Poppins", "Segoe UI", Arial, sans-serif;
-      line-height: 1.8;
-      font-size: 1rem;
-    }
-
-    h1,
-    h2,
-    h3,
-    h4 {
-      font-family: "Montserrat", "Poppins", sans-serif;
-      font-weight: 700;
-      margin: 0 0 0.5em;
-      line-height: 1.2;
-    }
-
-    h1 {
-      font-size: 2.5rem;
-      letter-spacing: 0.05em;
-    }
-
-    p {
-      margin: 0 0 1em;
-    }
-
-    @media (max-width: 600px) {
-      h1 {
-        font-size: 2rem;
-      }
-    }
-
-    /* Layout and other styles */
-    body {
-      background: linear-gradient(135deg, #f6d365 0%, #fda085 100%);
-      color: #333;
-      animation: fadeIn 1s ease-in;
-      overflow-x: hidden;
-    }
-    @keyframes fadeIn {
-      from {
-        opacity: 0;
-      }
-      to {
-        opacity: 1;
-      }
-    }
-    .fade-in {
-      opacity: 0;
-      transform: translateY(20px);
-      animation: fadeInUp 0.7s ease-out forwards;
-      animation-timeline: view();
-      animation-range: entry 0% cover 30%;
-    }
-    @keyframes fadeInUp {
-      from {
-        opacity: 0;
-        transform: translateY(20px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-    nav {
-      background: linear-gradient(90deg, #ff512f, #dd2476);
-      padding: 1em 2em;
-      text-align: left;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    }
-    nav a {
-      color: #fff;
-      margin: 0 1em;
-      text-decoration: none;
-      font-weight: bold;
-      transition: opacity 0.3s;
-    }
-    nav a:hover {
-      opacity: 0.7;
-    }
-    .container {
-      max-width: 900px;
-      margin: 3em auto;
-      background-color: rgba(255, 255, 255, 0.9);
-      padding: 2.5em;
-      border-radius: 10px;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    }
-    h1 {
-      text-align: center;
-    }
-    h2 {
-      text-align: center;
-      font-size: 1.5em;
-      color: #555;
-      margin-bottom: 1.5em;
-    }
-    h3 {
-      border-left: 4px solid #ff512f;
-      padding-left: 10px;
-      margin-bottom: 1em;
-      color: #ff512f;
-    }
-    .cv-section {
-      margin-bottom: 2.5em;
-    }
-    ul {
-      list-style-type: none;
-      padding: 0;
-    }
-    li {
-      margin-bottom: 1.5em;
-      line-height: 1.6;
-    }
-    .degree-title {
-      font-weight: bold;
-      font-size: 1.1em;
-      color: #333;
-    }
-    .details {
-      color: #666;
-    }
-    .highlight {
-      font-weight: bold;
-      color: #ff512f;
-    }
-    a.download-cv {
-      display: inline-block;
-      margin: 1.5em 0 0;
-      padding: 0.8em 1.5em;
-      color: #fff;
-      background: linear-gradient(90deg, #ff512f, #dd2476);
-      text-decoration: none;
-      border-radius: 5px;
-      font-weight: bold;
-      text-align: center;
-      font-size: 1em;
-      transition: opacity 0.3s;
-    }
-    a.download-cv:hover {
-      opacity: 0.8;
-    }
-    footer {
-      text-align: center;
-      margin-top: 3em;
-      font-size: 0.9em;
-      color: #666;
-    }
-    /* Chat widget styles */
-    .chat-toggle {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      width: 60px;
-      height: 60px;
-      border-radius: 50%;
-      background: linear-gradient(90deg, #ff512f, #dd2476);
-      color: #fff;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 30px;
-      cursor: pointer;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-      z-index: 1000;
-    }
-    .chat-box {
-      position: fixed;
-      bottom: 90px;
-      right: 20px;
-      width: 300px;
-      background: #fff;
-      border-radius: 10px;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-      transform: scale(0);
-      transform-origin: bottom right;
-      transition: transform 0.3s ease;
-      overflow: hidden;
-      z-index: 1000;
-    }
-    .chat-box.open {
-      transform: scale(1);
-    }
-    .chat-header {
-      background: linear-gradient(90deg, #ff512f, #dd2476);
-      color: #fff;
-      padding: 0.5em;
-      text-align: center;
-      font-weight: bold;
-    }
-    .chat-body {
-      padding: 1em;
-      display: flex;
-      flex-direction: column;
-    }
-    .chat-body input,
-    .chat-body textarea {
-      margin-bottom: 0.5em;
-      padding: 0.5em;
-      border: 1px solid #ccc;
-      border-radius: 5px;
-      font-family: inherit;
-    }
-  </style>
+  <link rel="stylesheet" href="assets/styles.css" />
 </head>
 <body>
 
@@ -231,7 +25,8 @@
   <div class="container fade-in">
     <h1>Mostafa Mahdi Yousef</h1>
     <h2>Curriculum Vitae</h2>
-     <a href="assets/docs/CV_MostafaMahdiYousef.pdf" class="download-cv">Download CV</a>
+    <a href="assets/docs/CV_MostafaMahdiYousef.pdf" class="download-cv">Download CV</a>
+
     <!-- Education Section -->
     <div class="cv-section fade-in">
       <h3>Education</h3>
@@ -260,9 +55,10 @@
           solar energy extraction.
         </li>
       </ul>
- 
     </div>
   </div>
+
+  <!-- Chat widget -->
   <div id="chat-toggle" class="chat-toggle">💬</div>
   <div id="chat-box" class="chat-box">
     <div class="chat-header">Chat with me</div>
@@ -278,6 +74,7 @@
     &copy; 2025 Mostafa Mahdi Yousef. All rights reserved.
   </footer>
 
+  <!-- Chat widget JS -->
   <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
   <script>
     (function () {
