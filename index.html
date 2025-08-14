@@ -12,6 +12,10 @@
       rel="stylesheet"
     />
     <style>
+      :root {
+        --accent-color: #1e90ff;
+      }
+
       body {
         margin: 0;
         font-family: "Poppins", "Segoe UI", Arial, sans-serif;
@@ -43,11 +47,20 @@
         margin: 0 1em;
         text-decoration: none;
         font-weight: bold;
-        transition: opacity 0.3s;
+        transition: color 0.3s;
       }
 
       nav a:hover {
-        opacity: 0.7;
+        color: var(--accent-color);
+      }
+
+      a {
+        color: inherit;
+        text-decoration: underline;
+      }
+
+      a:hover {
+        color: var(--accent-color);
       }
 
       .container {
@@ -69,7 +82,7 @@
       .profile-photo {
         width: 120px;
         height: 120px;
-        border: 10px solid #ff512f;
+        border: 10px solid var(--accent-color);
         border-radius: 50%;
         background-color: #ccc;
         margin-right: 2em;
@@ -131,14 +144,12 @@
       }
 
       .social-links a {
-        color: #007acc;
         display: inline-block;
         transition: transform 0.3s, color 0.3s;
       }
 
       .social-links a:hover {
         transform: scale(1.1);
-        color: #ff512f;
       }
 
       .location img {
@@ -148,7 +159,7 @@
       }
 
       h2 {
-        color: #dd2476;
+        color: var(--accent-color);
         margin-top: 0;
         font-size: 1.6em;
       }
@@ -162,15 +173,12 @@
       .greeting {
         position: absolute;
         white-space: nowrap;
-        background: linear-gradient(90deg, #ff512f, #dd2476);
+        background: linear-gradient(90deg, var(--accent-color), #dd2476);
         background-size: 200% 200%;
         background-position: 0% 50%;
         -webkit-background-clip: text;
         color: transparent;
         animation: zigzag 20s linear infinite, gradientShift 6s ease-in-out infinite;
-
-
-
       }
 
       @keyframes zigzag {
@@ -229,7 +237,7 @@
         width: 60px;
         height: 60px;
         border-radius: 50%;
-        background: linear-gradient(90deg, #ff512f, #dd2476);
+        background: var(--accent-color);
         color: #fff;
         display: flex;
         align-items: center;
@@ -260,7 +268,7 @@
       }
 
       .chat-header {
-        background: linear-gradient(90deg, #ff512f, #dd2476);
+        background: var(--accent-color);
         color: #fff;
         padding: 0.5em;
         text-align: center;
@@ -284,16 +292,21 @@
 
       .chat-body button {
         padding: 0.5em;
-        background: #ff512f;
+        background: var(--accent-color);
         color: #fff;
         border: none;
         border-radius: 5px;
         cursor: pointer;
-        transition: background 0.3s;
+        transition: opacity 0.3s;
       }
 
       .chat-body button:hover {
-        background: #dd2476;
+        opacity: 0.85;
+      }
+
+      hr {
+        border: none;
+        border-top: 2px solid var(--accent-color);
       }
     </style>
   </head>
@@ -372,14 +385,13 @@
         innovate the future of clean energy together!
       </p>
       <hr />
-        <p style="color: blue; font-size:0.2em; line-height: 1.6; margin: 10px 0;">
+        <p style="font-size:0.2em; line-height: 1.6; margin: 10px 0;">
         I designed and developed this open-source website from the ground up
         using only HTML and CSS, focusing on simplicity and efficiency. You are
         welcome to fork the repository from my
         <a
           href="https://github.com/MostafaMahdiYousef"
           target="_blank"
-          style="color: blue; text-decoration: underline"
           >GitHub</a
         >
         to use it as a template for your personal website.

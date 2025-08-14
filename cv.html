@@ -12,6 +12,10 @@
     rel="stylesheet"
   />
   <style>
+    :root {
+      --accent-color: #1e90ff;
+    }
+
     body {
       margin: 0;
       font-family: "Poppins", "Segoe UI", Arial, sans-serif;
@@ -40,10 +44,18 @@
       margin: 0 1em;
       text-decoration: none;
       font-weight: bold;
-      transition: opacity 0.3s;
+      transition: color 0.3s;
     }
     nav a:hover {
-      opacity: 0.7;
+      color: var(--accent-color);
+    }
+
+    a {
+      color: inherit;
+      text-decoration: underline;
+    }
+    a:hover {
+      color: var(--accent-color);
     }
     .container {
       max-width: 900px;
@@ -62,14 +74,14 @@
     h2 {
       text-align: center;
       font-size: 1.5em;
-      color: #555;
+      color: var(--accent-color);
       margin-bottom: 1.5em;
     }
     h3 {
-      border-left: 4px solid #ff512f;
+      border-left: 4px solid var(--accent-color);
       padding-left: 10px;
       margin-bottom: 1em;
-      color: #ff512f;
+      color: var(--accent-color);
     }
     .cv-section {
       margin-bottom: 2.5em;
@@ -92,14 +104,14 @@
     }
     .highlight {
       font-weight: bold;
-      color: #ff512f;
+      color: var(--accent-color);
     }
     a.download-cv {
       display: inline-block;
       margin: 1.5em 0 0;
       padding: 0.8em 1.5em;
       color: #fff;
-      background: linear-gradient(90deg, #ff512f, #dd2476);
+      background: var(--accent-color);
       text-decoration: none;
       border-radius: 5px;
       font-weight: bold;
@@ -108,7 +120,7 @@
       transition: opacity 0.3s;
     }
     a.download-cv:hover {
-      opacity: 0.8;
+      opacity: 0.85;
     }
     footer {
       text-align: center;
@@ -124,7 +136,7 @@
       width: 60px;
       height: 60px;
       border-radius: 50%;
-      background: linear-gradient(90deg, #ff512f, #dd2476);
+      background: var(--accent-color);
       color: #fff;
       display: flex;
       align-items: center;
@@ -152,7 +164,7 @@
       transform: scale(1);
     }
     .chat-header {
-      background: linear-gradient(90deg, #ff512f, #dd2476);
+      background: var(--accent-color);
       color: #fff;
       padding: 0.5em;
       text-align: center;
@@ -173,15 +185,15 @@
     }
     .chat-body button {
       padding: 0.5em;
-      background: #ff512f;
+      background: var(--accent-color);
       color: #fff;
       border: none;
       border-radius: 5px;
       cursor: pointer;
-      transition: background 0.3s;
+      transition: opacity 0.3s;
     }
     .chat-body button:hover {
-      background: #dd2476;
+      opacity: 0.85;
     }
   </style>
 </head>
