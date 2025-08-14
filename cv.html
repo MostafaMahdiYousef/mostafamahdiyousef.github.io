@@ -8,14 +8,45 @@
   <script src="assets/seo.js"></script>
   <title>Mostafa Mahdi Yousef - CV</title>
   <link
-    href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Poppins:wght@300;400;600&display=swap"
     rel="stylesheet"
   />
   <style>
+    /* Typography */
     body {
       margin: 0;
       font-family: "Poppins", "Segoe UI", Arial, sans-serif;
-      line-height: 1.6;
+      line-height: 1.8;
+      font-size: 1rem;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4 {
+      font-family: "Montserrat", "Poppins", sans-serif;
+      font-weight: 700;
+      margin: 0 0 0.5em;
+      line-height: 1.2;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      letter-spacing: 0.05em;
+    }
+
+    p {
+      margin: 0 0 1em;
+    }
+
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 2rem;
+      }
+    }
+
+    /* Layout and other styles */
+    body {
       background: linear-gradient(135deg, #f6d365 0%, #fda085 100%);
       color: #333;
       animation: fadeIn 1s ease-in;
@@ -55,9 +86,6 @@
     }
     h1 {
       text-align: center;
-      font-size: 2em;
-      margin-bottom: 0.5em;
-      margin-top: 0;
     }
     h2 {
       text-align: center;
