@@ -14,7 +14,16 @@
 
   <style>
     :root {
-      --accent-color: #1e90ff;
+
+      --shadow-soft: 0 4px 8px rgba(0, 0, 0, 0.08);
+      --shadow-hover: 0 8px 16px rgba(0, 0, 0, 0.15);
+    }
+    .shadow {
+      box-shadow: var(--shadow-soft);
+      transition: box-shadow 0.3s ease;
+    }
+    .shadow:hover {
+      box-shadow: var(--shadow-hover);
     }
 
     body {
@@ -64,7 +73,6 @@
       background-color: rgba(255, 255, 255, 0.9);
       padding: 2.5em;
       border-radius: 10px;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     }
     h1 {
       text-align: center;
@@ -118,7 +126,7 @@
       font-weight: bold;
       text-align: center;
       font-size: 1em;
-      transition: opacity 0.3s;
+      transition: opacity 0.3s, box-shadow 0.3s;
     }
     a.download-cv:hover {
       opacity: 0.85;
@@ -208,13 +216,14 @@
   </nav>
 
   <!-- Container for CV content -->
-  <div class="container fade-in">
+
+  <div class="container shadow">
     <h1>Mostafa Mahdi Yousef</h1>
     <h2>Curriculum Vitae</h2>
-    <a href="assets/docs/CV_MostafaMahdiYousef.pdf" class="download-cv">Download CV</a>
-
+     <a href="assets/docs/CV_MostafaMahdiYousef.pdf" class="download-cv shadow">Download CV</a>
     <!-- Education Section -->
-    <div class="cv-section fade-in">
+    <div class="cv-section shadow">
+
       <h3>Education</h3>
       <ul>
         <li>
