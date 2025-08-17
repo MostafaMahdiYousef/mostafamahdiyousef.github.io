@@ -183,52 +183,17 @@
       .greeting {
         position: absolute;
         white-space: nowrap;
-        background: linear-gradient(90deg, var(--accent-color), #dd2476);
-        background-size: 200% 200%;
-        background-position: 0% 50%;
-        -webkit-background-clip: text;
-        color: transparent;
-        animation: zigzag 20s linear infinite, gradientShift 6s ease-in-out infinite;
+        top: 0;
+        color: blue;
+        animation: slide 20s linear infinite;
       }
 
-      @keyframes zigzag {
+      @keyframes slide {
         0% {
-
           left: -100%;
-          top: 0;
-        }
-        20% {
-          left: -60%;
-          top: -10px;
-        }
-        40% {
-          left: -20%;
-          top: 10px;
-        }
-        60% {
-          left: 20%;
-          top: -10px;
-        }
-        80% {
-          left: 60%;
-          top: 10px;
         }
         100% {
           left: 100%;
-          top: 0;
-        }
-      }
-
-      @keyframes gradientShift {
-        0% {
-          background-position: 0% 50%;
-        }
-        50% {
-          background-position: 100% 50%;
-        }
-        100% {
-          background-position: 0% 50%;
-
         }
       }
 
